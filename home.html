@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuàTặng - Cửa hàng quà tặng dễ thương</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'comic': ['"Comic Neue"', 'cursive'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        'pink-pastel': '#FFC0CB',
+                        'mint': '#98FB98',
+                        'yellow-light': '#FFFACD',
+                        'purple-soft': '#E6E6FA'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-poppins bg-gradient-to-br from-purple-soft to-white min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-3xl">🎁</span>
+                    <span class="text-2xl font-bold text-pink-600 font-comic">QuàTặng</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-home text-sm"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                    <a href="#categories" class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-gift text-sm"></i>
+                        <span>Danh mục</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-fire text-sm"></i>
+                        <span>Bán chạy</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-star text-sm"></i>
+                        <span>Ưu đãi</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                        <span>Liên hệ</span>
+                    </a>
+                </div>
+
+                <!-- Right Side Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-search text-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-pink-600 transition-colors">
+                        <i class="fas fa-user text-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-pink-600 transition-colors relative">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                    <button class="md:hidden text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden hidden bg-white pb-4 px-4">
+            <a href="#" class="block py-2 text-gray-700 hover:text-pink-600">
+                <i class="fas fa-home mr-2"></i> Trang chủ
+            </a>
+            <a href="#categories" class="block py-2 text-gray-700 hover:text-pink-600">
+                <i class="fas fa-gift mr-2"></i> Danh mục
+            </a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-pink-600">
+                <i class="fas fa-fire mr-2"></i> Bán chạy
+            </a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-pink-600">
+                <i class="fas fa-star mr-2"></i> Ưu đãi
+            </a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-pink-600">
+                <i class="fas fa-phone-alt mr-2"></i> Liên hệ
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Banner -->
+    <section class="relative overflow-hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl overflow-hidden relative">
+                <div class="absolute right-0 bottom-0 w-1/3 md:w-2/5 h-auto opacity-90 z-0">
+                    <img src="https://quatangbunny.com/wp-content/uploads/2025/06/banner-bunny-qua-tang-va-phu-kien-pc-1.webp" 
+                         alt="Gift Banner" 
+                         class="w-full h-auto">
+                </div>
+                
+                <div class="relative z-10 p-8 md:p-12 flex flex-col items-start max-w-xl">
+                    <span class="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">🎉 Mới ra mắt</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-purple-800 font-comic mb-4">Quà tặng độc đáo <br>cho người thân yêu</h2>
+                    <p class="text-gray-700 mb-6">Khám phá bộ sưu tập các món quà dễ thương, xinh xắn dành cho mọi dịp đặc biệt của bạn</p>
+                    <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+                        Mua ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-purple-800 font-comic">Danh mục quà tặng</h2>
+                <p class="text-gray-600 mt-2">Tìm món quà hoàn hảo theo từng dịp</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- Category 1 -->
+                <div class="doodle-border bg-white p-4 rounded-xl text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 float">
+                        🎂
+                    </div>
+                    <h3 class="font-comic font-bold text-lg text-purple-700">Sinh nhật</h3>
+                    <p class="text-gray-600 text-sm mt-1">20+ sản phẩm</p>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="doodle-border bg-white p-4 rounded-xl text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center text-2xl mx-auto mb-3 float">
+                        💖
+                    </div>
+                    <h3 class="font-comic font-bold text-lg text-purple-700">Tình yêu</h3>
+                    <p class="text-gray-600 text-sm mt-1">15+ sản phẩm</p>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="doodle-border bg-white p-4 rounded-xl text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-light rounded-full flex items-center justify-center text-2xl mx-auto mb-3 float">
+                        ✨
+                    </div>
+                    <h3 class="font-comic font-bold text-lg text-purple-700">Kỷ niệm</h3>
+                    <p class="text-gray-600 text-sm mt-1">18+ sản phẩm</p>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="doodle-border bg-white p-4 rounded-xl text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-soft rounded-full flex items-center justify-center text-2xl mx-auto mb-3 float">
+                        🎄
+                    </div>
+                    <h3 class="font-comic font-bold text-lg text-purple-700">Lễ hội</h3>
+                    <p class="text-gray-600 text-sm mt-1">12+ sản phẩm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-12 bg-gradient-to-b from-white to-purple-soft">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-purple-800 font-comic">Sản phẩm nổi bật</h2>
+                <p class="text-gray-600 mt-2">Những món quà được yêu thích nhất</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="gift-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://quatangbunny.com/wp-content/uploads/2025/06/thumbnail-day-buoc-toc-scrunchies-mem-mai-nu-tinh.webp" alt="Cute Plushie" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">
+                            Bán chạy
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800">Gấu bông áo hồng</h3>
+                        <div class="flex items-center mt-1">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star-half-alt text-xs"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(120)</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-pink-600">320.000đ</span>
+                            <button class="bg-purple-100 hover:bg-purple-200 text-purple-800 p-2 rounded-full transition-colors">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="gift-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://quatangbunny.com/wp-content/uploads/2025/06/thumbnail-day-buoc-toc-scrunchies-mem-mai-nu-tinh.webp" alt="Photo Frame" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800">Khung ảnh đèn LED</h3>
+                        <div class="flex items-center mt-1">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="far fa-star text-xs"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(85)</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-pink-600">250.000đ</span>
+                            <button class="bg-purple-100 hover:bg-purple-200 text-purple-800 p-2 rounded-full transition-colors">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="gift-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://quatangbunny.com/wp-content/uploads/2025/06/thumbnail-day-buoc-toc-scrunchies-mem-mai-nu-tinh.webp" alt="Music Box" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-mint text-gray-800 text-xs px-2 py-1 rounded-full">
+                            Mới
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800">Hộp nhạc gỗ handmade</h3>
+                        <div class="flex items-center mt-1">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(42)</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-pink-600">380.000đ</span>
+                            <button class="bg-purple-100 hover:bg-purple-200 text-purple-800 p-2 rounded-full transition-colors">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="gift-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://quatangbunny.com/wp-content/uploads/2025/06/thumbnail-day-buoc-toc-scrunchies-mem-mai-nu-tinh.webp" alt="Stationery Set" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800">Bộ văn phòng phẩm dễ thương</h3>
+                        <div class="flex items-center mt-1">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star-half-alt text-xs"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(95)</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-pink-600">170.000đ</span>
+                            <button class="bg-purple-100 hover:bg-purple-200 text-purple-800 p-2 rounded-full transition-colors">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <button class="bg-white hover:bg-gray-50 text-pink-600 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105 border border-pink-200">
+                    Xem tất cả sản phẩm
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute -bottom-10 -right-10 opacity-10 text-9xl z-0">
+                    ✨
+                </div>
+                <div class="absolute -top-10 -left-10 opacity-10 text-9xl z-0">
+                    🎁
+                </div>
+                
+                <div class="relative z-10 text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold text-purple-800 font-comic mb-4">Đặt hàng theo yêu cầu</h2>
+                    <p class="text-gray-700 mb-6">Bạn đang tìm một món quà đặc biệt? Chúng mình có thể tạo ra món quà độc đáo theo ý tưởng của bạn!</p>
+                    <button class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105 btn-shimmer">
+                        Liên hệ ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-purple-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl">🎁</span>
+                        <span class="text-2xl font-bold text-pink-300 font-comic">QuàTặng</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Nơi bạn tìm thấy những món quà dễ thương và độc đáo cho người thân yêu.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-pink-300 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-pink-300 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-pink-300 transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-pink-300 transition-colors">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-pink-300">Liên kết nhanh</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Trang chủ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sản phẩm</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Về chúng tôi</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Điều khoản dịch vụ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-pink-300">Liên hệ</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1 text-pink-300"></i>
+                            <span class="text-gray-300">123 Đường Quà Tặng, Quận 1, TP.HCM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-pink-300"></i>
+                            <span class="text-gray-300">0123 456 789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-pink-300"></i>
+                            <span class="text-gray-300">hello@quatang.vn</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-lg font-bold mb-4 text-pink-300">Đăng ký nhận tin</h3>
+                    <p class="text-gray-300 mb-4">Nhận thông tin về sản phẩm mới và ưu đãi đặc biệt</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email của bạn" class="px-4 py-2 w-full rounded-l-lg focus:outline-none">
+                        <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider with doodle -->
+            <div class="relative my-8 h-px bg-purple-700">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-900 px-4">
+                    <span class="handwritten text-pink-300 text-xl">✨ cảm ơn bạn ✨</span>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-400 text-sm">
+                <p>© 2023 QuàTặng. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Toggle mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('button.md\\:hidden');
+            const mobileMenu = document.querySelector('div.md\\:hidden');
+            
+            menuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
